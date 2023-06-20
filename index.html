@@ -1,32 +1,96 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
 <head>
-<meta charset="UTF-8">
-<title>Aaron Miller</title>
-<link href="styles.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaron Miller | Applied Mathematics Ph.D. Candidate</title>
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo 2">
 </head>
+
 <body>
-<section class="top">
-  <header> <a href="#" class="logo">Aaron Miller</a>
-    <nav>
-      <ul class="navbar">
-        <li><a href="#">About</a></li>
-        <li><a href="#">CV</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+
+  <header>
+    <nav class="navbar stickey-top navbar-expand-sm">
+      <div class="container">
+        <a href="#" class="navbar-brand">Aaron Miller</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
-  <div class="main">
-    <div class="main-text">
-      <h1>Aaron Miller</h1>
-      <h3>Applied Mathematics Ph.D. Candidate at Harvard University</h3>
-      <p>I study the mathematical jhformulations underlying practical algorithms.</p>
-    </div>
-    <img class="main-image" src="images/aaron.png" alt="Aaron's Portrait"> </div>
-</section>
-<section>
-  <h1>About</h1>
-</section>
+  <main>
+    <section style="position: relative;">
+      <div id="tsparticles"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-5 text-light d-flex flex-column justify-content-center align-items-start">
+            <h1>Aaron Miller</h1>
+            <h4>Applied Mathematics Ph.D. Candidate at Harvard University</h4>
+            <p>I study the mathematical formulations underlying practical algorithms.</p>
+            <button type="button" class="btn btn-outline-light align-self-start">Learn More...</button>
+          </div>
+          <div class="col-md-4"><img src="imgs/aaron.png" class="img-fluid" alt="Aaron's Portrait"></div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6 my-5">
+            <h1 class="text-center text-dark">About Me</About></h1>
+            <p class="text-dark">I'm a first-year (G1) graduate student at Harvard University purusing a Ph.D.
+              in Applied Mathematics. I work in the
+              Computational Science and Engineering Lab under the advisement of Dr. Petros
+              Koumoutsakos. I graduated in May 2023 from The University of North Carolinia at Chapel Hill with majors in
+              Applied Mathematics and Astrophysics and a minor in Statistics and Analytics. At UNC, I was advised by Dr.
+              Joaquín Drut, with whom I developed the Classical Virial Expansion Engine (CVE²).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col my-5">
+            <h1 class="text-white">Experience</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col"><h3>Skills
+
+          </h3></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.10.1/tsparticles.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
 </body>
+
 </html>
