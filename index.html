@@ -54,7 +54,7 @@
             <h1>Aaron Miller</h1>
             <h4>Applied Mathematics Ph.D. Student at Harvard University</h4>
             <p>I study the mathematical formulations underlying practical algorithms.</p>
-            <button type="button" class="btn btn-outline-light align-self-start">Learn More...</button>
+            <button type="button" class="btn btn-primary align-self-start">Learn More...</button>
           </div>
           <div class="col-md-4"><img src="imgs/aaron.png" class="img-fluid" alt="Aaron's Portrait"></div>
         </div>
@@ -63,8 +63,9 @@
     <section class="bg-light">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-6 my-5">
-            <h1 class="text-center text-dark">About Me</About></h1>
+          <div class="col-7 my-5">
+            <h1 class="text-center mb-5"><span class="text-primary">
+                &lt </span><span class="text-dark">About Me</span><span class="text-primary"> /&gt</span></h1>
             <p class="text-dark">I'm a first-year (G1) graduate student at Harvard University purusing a Ph.D.
               in Applied Mathematics. I work in the
               Computational Science and Engineering Lab under the advisement of Dr. Petros
@@ -77,16 +78,91 @@
     </section>
     <section>
       <div class="container">
-        <div class="row">
-          <div class="col my-5">
-            <h1 class="text-white">Experience</h1>
+        <div class="row my-5">
+          <h1 class="text-center mb-5"><span class="text-primary">
+              &lt </span><span class="text-light">Newest Developments</span><span class="text-primary"> /&gt</span></h1>
+          <div class="col">
+            <div class="card h-100">
+              <h5 class="card-header">New Paper Coming</h5>
+              <div class="card-body">
+                <h5 class="card-title text-light">Calculating and Resumming the Classical Virial Expansion Using
+                  Automated Algebra
+                </h5>
+                <p class="card-text">Dr. Joaquín Drut and I have uploaded a preprint of our most recent work involving
+                  the Classical Virial Expansion Engine (CVE²). In it, we use schematic model potentials to exactly
+                  calculate the virial coefficients of a classical gas up to 6th order, and we use them (along with
+                  Padé-Borel resummation techniques) to investigate the convergence properties
+                  of the virial expansion of basic thermodynamic quantities.</p>
+                <a href="#" class="btn btn-primary">Link to arXiv Preprint</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <h5 class="card-header">Undergraduate Graduation</h5>
+              <div class="card-body">
+                <h5 class="card-title text-light">Highest Honors, B.S. with Majors in Applied Mathematics and
+                  Astrophysics
+                </h5>
+                <p class="card-text">I graduated from the University of North Carolina at Chapel Hill with a Bachelor of
+                  Science in Physics and a Second Major in Mathematics. I recieved highest honors in physics for my
+                  senior honors
+                  thesis project, the Classical Virial Expansion Engine (CVE²), which I completed under the advisement
+                  of Dr. Joaquín Drut. The thesis can be found on the Carolina Digital Repository at the link below.</p>
+                <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j?locale=en" class="btn btn-primary">View
+                  Undergraduate Thesis</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <h5 class="card-header">Internship</h5>
+              <div class="card-body">
+                <h5 class="card-title text-light">Sales and Trading Rotational Summer Analyst at Bank of America
+                </h5>
+                <p class="card-text">I most recently interned as a Sales and Trading Analyst at Bank of America, where I
+                  had the opportunity to work with amazing teams on the Equity Derivative Trading and Credit Trading
+                  desks. Within the Equity Derivative desk, I rotated though the single stock, index, and exotic groups,
+                  and
+                  within the Credit Trading desk, I rotated through the investment-grade, emerging markets, high-yield,
+                  and
+                  leveraged loans groups.</p>
+                <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j?locale=en" class="btn btn-primary">See
+                  Earlier Experience</a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col"><h3>Skills
-
-          </h3></div>
-        </div>
+      </div>
+    </section>
+    <section class="bg-light">
+      <div class="container">
+        <form action="php/form.php" method="post">
+          <div class="row">
+            <h1 class="text-center my-5"><span class="text-primary">
+                &lt </span><span class="text-dark">Contact</span><span class="text-primary"> /&gt</span></h1>
+            <div class="col mb-3">
+              <label for="first" class="form-label text-dark">First Name</label>
+              <input type="text" class="form-control" placeholder="Leonhard" id="first" name="first">
+            </div>
+            <div class="col">
+              <label for="last" class="form-label text-dark">Last Name</label>
+              <input type="text" class="form-control" placeholder="Euler" id="last" name="last">
+            </div>
+            <div class="col-5">
+              <label for="email" class="form-label text-dark">Email</label>
+              <input type="text" class="form-control" placeholder="leuler@unibas.ch" id="email" name="email">
+            </div>
+            <div class="col-12">
+              <label for="message" class="form-label text-dark">Write a Message</label>
+              <textarea class="form-control mb-3" id="message"
+                placeholder="The exponential of i*π, where i is the imaginary unit, plus one is equal to zero." rows="7" name="message"></textarea>
+            </div>
+            <div class="mb-5">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
   </main>
