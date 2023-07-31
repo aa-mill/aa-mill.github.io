@@ -10,32 +10,29 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo 2">
 </head>
 
-<body>
-
-  <header>
-    <nav class="navbar stickey-top navbar-expand-sm">
-      <div class="container">
+<body class="body">
+  <i data-fa-symbol="right" class="fa-solid fa-arrow-right-long"></i>
+  <i data-fa-symbol="out" class="fa-solid fa-arrow-up-right-from-square"></i>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-md bg-dark">
+      <div class="container-md">
         <a href="#" class="navbar-brand">Aaron Miller</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav nav-underline">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" href="./">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="/about/">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">CV</a>
+              <a class="nav-link" href="/cv/">CV</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="/projects/">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://aa-mill.github.io/blog/">Blog</a>
@@ -46,27 +43,34 @@
     </nav>
   </header>
   <main>
-    <section style="position: relative;">
+    <section style="position: relative">
       <div id="tsparticles"></div>
-      <div class="container">
+      <div class="container-md">
         <div class="row justify-content-center">
-          <div class="col-md-5 text-light d-flex flex-column justify-content-center align-items-start">
-            <h1>Aaron Miller</h1>
-            <h4>Applied Mathematics Ph.D. Student at Harvard University</h4>
-            <p>I study the mathematical formulations underlying practical algorithms.</p>
-            <button type="button" class="btn btn-primary align-self-start">Learn More...</button>
+          <div class="col-md-7 col-lg-5 d-flex align-items-center justify-content-center">
+            <div class="bg-black text-light d-flex flex-column p-5 flex-grow-1 mt-5 mt-md-0"
+              style="--bs-bg-opacity: .65;">
+              <h1>Aaron Miller</h1>
+              <h4>Applied Mathematics Ph.D. Student at Harvard University</h4>
+              <p>I study the mathematical formulations underlying practical algorithms.</p>
+              <div class="d-flex gap-3">
+                <a href="/about/" class="btn btn-primary">Learn More</a>
+                <a href="/cv/" class="btn btn-outline-light">View CV</a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4"><img src="imgs/aaron.png" class="img-fluid" alt="Aaron's Portrait"></div>
+          <div class="col-sm-8 col-md-5 col-lg-4 d-flex align-items-end"><img src="imgs/aaron.png" class="img-fluid"
+              alt="Aaron's Portrait"></div>
         </div>
       </div>
     </section>
-    <section class="bg-light">
-      <div class="container">
+    <section class="bg-dark-subtle">
+      <div class="container-md">
         <div class="row justify-content-center">
-          <div class="col-7 my-5">
-            <h1 class="text-center mb-5"><span class="text-primary">
-                &lt </span><span class="text-dark">About Me</span><span class="text-primary"> /&gt</span></h1>
-            <p class="text-dark">I'm a first-year (G1) graduate student at Harvard University purusing a Ph.D.
+          <div class="col-sm-9 col-lg-7 my-5">
+            <h1 id="about" class="text-center mb-5"><span class="text-primary">
+                &lt </span><span class="text-light">About Me</span><span class="text-primary"> /&gt</span></h1>
+            <p>I'm a first-year (G1) graduate student at Harvard University pursuing a Ph.D.
               in Applied Mathematics. I work in the
               Computational Science and Engineering Lab under the advisement of Dr. Petros
               Koumoutsakos. I graduated in May 2023 from The University of North Carolinia at Chapel Hill with majors in
@@ -77,49 +81,58 @@
       </div>
     </section>
     <section>
-      <div class="container">
-        <div class="row my-5">
+      <div class="container-md">
+        <div class="row g-3 my-5">
           <h1 class="text-center mb-5"><span class="text-primary">
-              &lt </span><span class="text-light">Newest Developments</span><span class="text-primary"> /&gt</span></h1>
-          <div class="col">
+              &lt </span><span class="text-light">Latest Developments</span><span class="text-primary"> /&gt</span></h1>
+          <div class="col-lg">
             <div class="card h-100">
               <h5 class="card-header">New Paper Coming</h5>
               <div class="card-body">
-                <h5 class="card-title text-light">Calculating and Resumming the Classical Virial Expansion Using
+                <h5 class="card-title">Calculating and Resumming the Classical Virial Expansion Using
                   Automated Algebra
                 </h5>
+                <h6 class="card-subtitle mb-2">July 2023</h6>
                 <p class="card-text">Dr. Joaquín Drut and I have uploaded a preprint of our most recent work involving
                   the Classical Virial Expansion Engine (CVE²). In it, we use schematic model potentials to exactly
                   calculate the virial coefficients of a classical gas up to 6th order, and we use them (along with
                   Padé-Borel resummation techniques) to investigate the convergence properties
                   of the virial expansion of basic thermodynamic quantities.</p>
-                <a href="#" class="btn btn-primary">Link to arXiv Preprint</a>
+                <a href="https://arxiv.org/abs/2307.13170" class="btn btn-primary icon-link icon-link-hover d-inline-flex">Link
+                  to arXiv Preprint<svg class="bi">
+                    <use xlink:href="#out" />
+                  </svg></a>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-lg">
             <div class="card h-100">
               <h5 class="card-header">Undergraduate Graduation</h5>
               <div class="card-body">
-                <h5 class="card-title text-light">Highest Honors, B.S. with Majors in Applied Mathematics and
+                <h5 class="card-title">Highest Honors, B.S. with Majors in Applied Mathematics and
                   Astrophysics
                 </h5>
+                <h6 class="card-subtitle mb-2">May 2023</h6>
                 <p class="card-text">I graduated from the University of North Carolina at Chapel Hill with a Bachelor of
                   Science in Physics and a Second Major in Mathematics. I recieved highest honors in physics for my
                   senior honors
                   thesis project, the Classical Virial Expansion Engine (CVE²), which I completed under the advisement
                   of Dr. Joaquín Drut. The thesis can be found on the Carolina Digital Repository at the link below.</p>
-                <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j?locale=en" class="btn btn-primary">View
-                  Undergraduate Thesis</a>
+                <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j?locale=en"
+                  class="btn btn-primary icon-link icon-link-hover d-inline-flex">View
+                  Undergraduate Thesis<svg class="bi">
+                    <use xlink:href="#out" />
+                  </svg></a>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-lg">
             <div class="card h-100">
               <h5 class="card-header">Internship</h5>
               <div class="card-body">
-                <h5 class="card-title text-light">Sales and Trading Rotational Summer Analyst at Bank of America
+                <h5 class="card-title">Sales and Trading Rotational Summer Analyst at Bank of America
                 </h5>
+                <h6 class="card-subtitle mb-2">Summer 2022</h6>
                 <p class="card-text">I most recently interned as a Sales and Trading Analyst at Bank of America, where I
                   had the opportunity to work with amazing teams on the Equity Derivative Trading and Credit Trading
                   desks. Within the Equity Derivative desk, I rotated though the single stock, index, and exotic groups,
@@ -127,49 +140,94 @@
                   within the Credit Trading desk, I rotated through the investment-grade, emerging markets, high-yield,
                   and
                   leveraged loans groups.</p>
-                <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j?locale=en" class="btn btn-primary">See
-                  Earlier Experience</a>
+                <a href="/cv/"
+                  class="btn btn-primary icon-link icon-link-hover d-inline-flex">See
+                  Earlier Experience<svg class="bi" fill="currentColor">
+                    <use xlink:href="#out" />
+                  </svg></a>
               </div>
             </div>
+          </div>
+          <div class="col-12 d-flex justify-content-end"><a href="#"
+              class="btn btn-outline-light icon-link icon-link-hover d-flex align-items-center">View More
+              <svg class="bi">
+                <use xlink:href="#right" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
-    <section class="bg-light">
-      <div class="container">
-        <form action="php/form.php" method="post">
-          <div class="row">
-            <h1 class="text-center my-5"><span class="text-primary">
-                &lt </span><span class="text-dark">Contact</span><span class="text-primary"> /&gt</span></h1>
-            <div class="col mb-3">
-              <label for="first" class="form-label text-dark">First Name</label>
-              <input type="text" class="form-control" placeholder="Leonhard" id="first" name="first">
-            </div>
-            <div class="col">
-              <label for="last" class="form-label text-dark">Last Name</label>
-              <input type="text" class="form-control" placeholder="Euler" id="last" name="last">
-            </div>
-            <div class="col-5">
-              <label for="email" class="form-label text-dark">Email</label>
-              <input type="text" class="form-control" placeholder="leuler@unibas.ch" id="email" name="email">
-            </div>
-            <div class="col-12">
-              <label for="message" class="form-label text-dark">Write a Message</label>
-              <textarea class="form-control mb-3" id="message"
-                placeholder="The exponential of i*π, where i is the imaginary unit, plus one is equal to zero." rows="7" name="message"></textarea>
-            </div>
-            <div class="mb-5">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+    <section class="bg-dark-subtle">
+      <div class="container-md">
+        <div class="row justify-content-center">
+          <div class="col-sm-9 col-lg-7 text-center my-5">
+            <h1 class="mb-5"><span class="text-primary">
+                &lt </span><span class="text-light">Contact</span><span class="text-primary"> /&gt</span></h1>
+            <p>I'm happy to hear from you, especially if it means I get the chance to
+              learn something new. Also, feel free to share any feedback you may have about the content on my <a
+                href="https://aa-mill.github.io/blog/">blog</a>. I appreciate being notified of
+              any
+              errors, and I welcome any technical criticism.</p>
+          </div>
+        </div>
+        <form class="row gx-3 gy-2 needs-validation" action="https://formspree.io/f/xleydarr" method="post" novalidate>
+          <div class="col-sm">
+            <label for="first" class="form-label">First Name</label>
+            <input type="text" class="form-control" placeholder="Leonhard" id="first" name="first" required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">You forgot your first name!</div>
+          </div>
+          <div class="col-sm">
+            <label for="last" class="form-label">Last Name</label>
+            <input type="text" class="form-control" placeholder="Euler" id="last" name="last" required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">You forgot your last name!</div>
+          </div>
+          <div class="col-md-5">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" placeholder="leuler@unibas.ch" id="email" name="email" required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">You forgot your email!</div>
+          </div>
+          <div class="col-12">
+            <label for="role" class="form-label">I am a...</label>
+            <select id="role" class="form-select" name="role" required>
+              <option selected disabled value=""></option>
+              <option value="Student">Student</option>
+              <option value="Faculty">Faculty</option>
+              <option value="Employer">Employer</option>
+              <option value="Other">Other</option>
+            </select>
+            <div class="valid-feedback">Awesome!</div>
+            <div class="invalid-feedback">Let me know who you are!</div>
+          </div>
+          <div class="col-12">
+            <label for="message" class="form-label">Write a Message</label>
+            <textarea class="form-control" id="message"
+              placeholder="The exponential of i*π, where i is the imaginary unit, plus one is equal to zero." rows="7"
+              name="message" required></textarea>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">You forgot to write your message!</div>
+          </div>
+          <div class="col-12 mb-5">
+            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>
       </div>
     </section>
   </main>
+  <footer class="mt-auto">
+    <div class="container py-3 d-flex justify-content-center align-items-center">
+      <p class="mb-0">© 2023 Aaron Miller. All rights reserved.</p>
+    </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.10.1/tsparticles.bundle.min.js"></script>
   <script src="js/app.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-
+  <script src="../js/fontawesome.min.js"></script>
+  <script src="../js/brands.min.js"></script>
+  <script src="../js/solid.min.js"></script>
 </body>
 
 </html>

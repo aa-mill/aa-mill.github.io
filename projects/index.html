@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaron Miller | About</title>
+  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo 2">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/atom-one-dark.min.css">
+</head>
+
+<body class="body">
+  <i data-fa-symbol="right" class="fa-solid fa-arrow-right-long"></i>
+  <i data-fa-symbol="out" class="fa-solid fa-arrow-up-right-from-square"></i>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-md bg-dark">
+      <div class="container-md">
+        <a href="#" class="navbar-brand">Aaron Miller</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav nav-underline">
+            <li class="nav-item">
+              <a class="nav-link" href="../">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/about/">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cv/">CV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/projects/">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://aa-mill.github.io/blog/">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container-md">
+    <h1 id="about" class="text-center my-5"><span class="text-primary">
+        &lt </span><span class="text-light">Projects</span><span class="text-primary"> /&gt</span></h1>
+    <div class="card mb-5">
+      <div class="card-header">Ongoing...</div>
+      <div class="row g-0">
+        <div class="col-lg-6 bg-dark-subtle d-flex align-items-center">
+          <pre class="mb-0"><code class="bg-transparent language-python"># import libraries
+import numpy as np
+import cvee
+
+# define system temperature
+T = 1
+
+# define interaction potential, parameterized by A,b1,b2
+A,b1,b2 = 3,4,5
+def potential(r,T):
+    return -T*np.log(1+A*np.exp(-b1*r**2)-(1+a)*np.exp(-b2*r**2))
+
+# specify desired virial coefficient orders
+Ns = [2,5,9]
+
+# get results
+output = [cvee.Virial(N,potential,T).assemble() for N in Ns]</code></pre>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="card-body">
+            <h3 class="card-title"><span class="text-primary">
+                // </span><span class="text-light">Classical Virial Expansion Engine (CVE²)</span></h3>
+            <p class="card-text">The CVE² computes the power series coefficients of the classical virial expansion of
+              the grand-canonical partition function. Its creation is the subject of my undergraduate honors thesis.
+              Since my defense, I have continued to work with my advisor, Dr. Joaquín Drut, on extending
+              its capabilities further. We recently released a preprint covering our latest developments. Additional
+              information can be found on the project's website, listed below. </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="https://arxiv.org/abs/2307.13170" class="btn btn-primary icon-link icon-link-hover d-flex">Newest Paper<svg class="bi">
+                  <use xlink:href="#out"></use>
+                </svg></a>
+              <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j" class="btn btn-outline-light icon-link icon-link-hover d-flex">Undergraduate Thesis<svg
+                  class="bi">
+                  <use xlink:href="#out"></use>
+                </svg></a>
+              <a href="https://tarheels.live/cvee/" class="btn btn-outline-light icon-link icon-link-hover d-flex">CVE² Website<svg class="bi">
+                  <use xlink:href="#out"></use>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="mt-auto">
+    <div class="container-fluid py-3 bg-dark-subtle d-flex justify-content-center align-items-center">
+      <p class="mb-0">© 2023 Aaron Miller. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../js/app.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="../js/fontawesome.min.js"></script>
+  <script src="../js/brands.min.js"></script>
+  <script src="../js/solid.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>
