@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aaron Miller | Applied Mathematics Ph.D. Student at Harvard</title>
+  <link rel="icon" type="image/x-icon" href="imgs/red.ico">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo 2">
@@ -16,7 +17,11 @@
   <header class="sticky-top">
     <nav class="navbar navbar-expand-md bg-dark">
       <div class="container-md">
-        <a href="#" class="navbar-brand">Aaron Miller</a>
+        <a href="./" class="navbar-brand d-inline-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256" width="1.25em" fill="currentColor" class="me-2">
+            <path
+              d="m234.29,201.24l-23.99-41.55-61.52-106.56-20.78-35.98-20.78,35.98-61.52,106.56-23.99,41.55L0,238.86h38.39l22.18-37.62h46.66v37.62h41.55v-116.07l21.3,36.9,23.99,41.55,21.71,37.62h40.22l-21.71-37.62Zm-149.24-41.55l22.18-37.62v37.62h-22.18Z" />
+          </svg>Aaron Miller</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,8 +59,14 @@
               <h4>Applied Mathematics Ph.D. Student at Harvard University</h4>
               <p>I study the mathematical formulations underlying practical algorithms.</p>
               <div class="d-flex gap-3">
-                <a href="/about/" class="btn btn-primary">Learn More</a>
-                <a href="/cv/" class="btn btn-outline-light">View CV</a>
+                <a href="/about/" class="btn btn-primary icon-link icon-link-hover d-inline-flex">Learn More<svg
+                    class="bi">
+                    <use xlink:href="#right" />
+                  </svg></a>
+                <a href="/cv/" class="btn btn-outline-light icon-link icon-link-hover d-inline-flex">View CV<svg
+                    class="bi">
+                    <use xlink:href="#right" />
+                  </svg></a>
               </div>
             </div>
           </div>
@@ -98,7 +109,8 @@
                   calculate the virial coefficients of a classical gas up to 6th order, and we use them (along with
                   Padé-Borel resummation techniques) to investigate the convergence properties
                   of the virial expansion of basic thermodynamic quantities.</p>
-                <a href="https://arxiv.org/abs/2307.13170" class="btn btn-primary icon-link icon-link-hover d-inline-flex">Link
+                <a href="https://arxiv.org/abs/2307.13170" target="_blank"
+                  class="btn btn-primary icon-link icon-link-hover d-inline-flex">Link
                   to arXiv Preprint<svg class="bi">
                     <use xlink:href="#out" />
                   </svg></a>
@@ -118,7 +130,7 @@
                   senior honors
                   thesis project, the Classical Virial Expansion Engine (CVE²), which I completed under the advisement
                   of Dr. Joaquín Drut. The thesis can be found on the Carolina Digital Repository at the link below.</p>
-                <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j?locale=en"
+                <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j?locale=en" target="_blank"
                   class="btn btn-primary icon-link icon-link-hover d-inline-flex">View
                   Undergraduate Thesis<svg class="bi">
                     <use xlink:href="#out" />
@@ -140,15 +152,14 @@
                   within the Credit Trading desk, I rotated through the investment-grade, emerging markets, high-yield,
                   and
                   leveraged loans groups.</p>
-                <a href="/cv/"
-                  class="btn btn-primary icon-link icon-link-hover d-inline-flex">See
-                  Earlier Experience<svg class="bi" fill="currentColor">
-                    <use xlink:href="#out" />
+                <a href="/cv/" class="btn btn-primary icon-link icon-link-hover d-inline-flex">See
+                  Earlier Experience<svg class="bi">
+                    <use xlink:href="#right" />
                   </svg></a>
               </div>
             </div>
           </div>
-          <div class="col-12 d-flex justify-content-end"><a href="#"
+          <div class="col-12 d-flex justify-content-end"><a href="/cv/"
               class="btn btn-outline-light icon-link icon-link-hover d-flex align-items-center">View More
               <svg class="bi">
                 <use xlink:href="#right" />
@@ -218,8 +229,15 @@
     </section>
   </main>
   <footer class="mt-auto">
-    <div class="container py-3 d-flex justify-content-center align-items-center">
-      <p class="mb-0">© 2023 Aaron Miller. All rights reserved.</p>
+    <div class="container-md py-3 d-flex flex-wrap justify-content-center align-items-center gap-2 text-body-secondary">
+      <p class="mb-0">© 2023 Aaron Miller</p>
+      <svg class="bi cc-icon">
+        <use href="../sprites/brands.svg#creative-commons" />
+      </svg>
+      <svg class="bi cc-icon">
+        <use href="../sprites/brands.svg#creative-commons-by" />
+      </svg>
+      <p class="mb-0">CC BY 4.0</p>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.10.1/tsparticles.bundle.min.js"></script>

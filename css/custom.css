@@ -9375,6 +9375,12 @@ textarea.form-control-lg {
   fill: currentColor;
 }
 
+.cc-icon {
+  width: 1.25em;
+  height: 1.25em;
+  fill: currentColor;
+}
+
 .cv-toc .nav-underline .nav-link {
   border-bottom: 0;
   padding: 0 0 0 1em;

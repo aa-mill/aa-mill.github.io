@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aaron Miller | About</title>
+  <title>Aaron Miller | Projects</title>
+  <link rel="icon" type="image/x-icon" href="../imgs/red.ico">
   <link rel="stylesheet" href="../css/custom.css">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo 2">
@@ -17,8 +18,11 @@
   <header class="sticky-top">
     <nav class="navbar navbar-expand-md bg-dark">
       <div class="container-md">
-        <a href="#" class="navbar-brand">Aaron Miller</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <a href="../" class="navbar-brand d-inline-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+          width="1.25em" fill="currentColor" class="me-2">
+          <path
+            d="m234.29,201.24l-23.99-41.55-61.52-106.56-20.78-35.98-20.78,35.98-61.52,106.56-23.99,41.55L0,238.86h38.39l22.18-37.62h46.66v37.62h41.55v-116.07l21.3,36.9,23.99,41.55,21.71,37.62h40.22l-21.71-37.62Zm-149.24-41.55l22.18-37.62v37.62h-22.18Z" />
+        </svg>Aaron Miller</a>        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -27,13 +31,13 @@
               <a class="nav-link" href="../">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/about/">About</a>
+              <a class="nav-link" href="/about/">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/cv/">CV</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/projects/">Projects</a>
+              <a class="nav-link active" href="/projects/">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://aa-mill.github.io/blog/">Blog</a>
@@ -94,12 +98,18 @@ output = [cvee.Virial(N,potential,T).assemble() for N in Ns]</code></pre>
       </div>
     </div>
   </div>
-  <footer class="mt-auto">
-    <div class="container-fluid py-3 bg-dark-subtle d-flex justify-content-center align-items-center">
-      <p class="mb-0">© 2023 Aaron Miller. All rights reserved.</p>
+  <footer class="mt-auto bg-dark-subtle">
+    <div class="container-md py-3 d-flex flex-wrap justify-content-center align-items-center gap-2 text-body-secondary">
+      <p class="mb-0">© 2023 Aaron Miller</p>
+      <svg class="bi cc-icon">
+        <use href="../sprites/brands.svg#creative-commons" />
+      </svg>
+      <svg class="bi cc-icon">
+        <use href="../sprites/brands.svg#creative-commons-by" />
+      </svg>
+      <p class="mb-0">CC BY 4.0</p>
     </div>
   </footer>
-  <script src="../js/app.js"></script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   <script src="../js/fontawesome.min.js"></script>
   <script src="../js/brands.min.js"></script>
