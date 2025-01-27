@@ -54,16 +54,21 @@
   <main>
     <section style="position: relative">
       <div id="tsparticles"></div>
+      <!-- go full width below md -->
       <div class="container-md">
         <div class="row justify-content-center">
+          <!-- text box column-->
+          <!-- take up 5 cols above lg, 7 from md-lg, whole row below md -->
           <div class="col-md-7 col-lg-5 d-flex align-items-center justify-content-center">
-            <div class="bg-black text-light d-flex flex-column p-5 flex-grow-1 mt-5 mt-md-0"
-              style="--bs-bg-opacity: .65;">
+            <!-- actual text box -->
+            <!-- no margin until md, then add top margin -->
+            <div class="bg-black text-light d-flex flex-column p-5 mt-5 mt-md-0" style="--bs-bg-opacity: .65;">
               <h1>Aaron Miller</h1>
               <h4>Applied Mathematics Ph.D. Student at Harvard University</h4>
-              <p>I study the mathematical formulations underlying practical algorithms.</p>
+              <p>I study geometric deep learning methods for turbulent flow modeling.</p>
               <div class="d-flex gap-3">
-                <a href="/about/" class="btn btn-primary icon-link icon-link-hover d-inline-flex">Learn More<svg
+                <!-- need to add d-inline-flex to override inline-block from btn -->
+                <a href="/about/" class="btn btn-primary icon-link icon-link-hover d-inline-flex">About Me<svg
                     class="bi">
                     <use xlink:href="#right" />
                   </svg></a>
@@ -74,6 +79,7 @@
               </div>
             </div>
           </div>
+          <!-- image sets height of parent div -->
           <div class="col-sm-8 col-md-5 col-lg-4 d-flex align-items-end"><img src="imgs/aaron.png" class="img-fluid"
               alt="Aaron's Portrait"></div>
         </div>
@@ -85,12 +91,12 @@
           <div class="col-sm-9 col-lg-7 my-5">
             <h1 id="about" class="text-center mb-5"><span class="text-primary">
                 &lt </span><span class="text-light">About Me</span><span class="text-primary"> /&gt</span></h1>
-            <p>I'm a first-year (G1) graduate student at Harvard University pursuing a Ph.D.
+            <p>I'm a second-year (G2) graduate student at Harvard University pursuing a Ph.D.
               in Applied Mathematics. I work in the
               Computational Science and Engineering Lab under the advisement of Dr. Petros
-              Koumoutsakos. I graduated in May 2023 from The University of North Carolinia at Chapel Hill with majors in
-              Applied Mathematics and Astrophysics and a minor in Statistics and Analytics. At UNC, I was advised by Dr.
-              Joaquín Drut, with whom I developed the Classical Virial Expansion Engine (CVE²).</p>
+              Koumoutsakos. I graduated in May 2023 from UNC-Chapel Hill with majors in
+              Applied Mathematics and Astrophysics and a minor in Statistics. At UNC, I was advised by Dr.
+              Joaquín Drut.</p>
           </div>
         </div>
       </div>
@@ -99,23 +105,21 @@
       <div class="container-md">
         <div class="row g-3 my-5">
           <h1 class="text-center mb-5"><span class="text-primary">
-              &lt </span><span class="text-light">Latest Developments</span><span class="text-primary"> /&gt</span></h1>
+              &lt </span><span class="text-light">Updates</span><span class="text-primary"> /&gt</span></h1>
           <div class="col-lg">
             <div class="card h-100">
-              <h5 class="card-header">New Paper Coming</h5>
+              <h5 class="card-header">Upcoming Research Practicum</h5>
               <div class="card-body">
-                <h5 class="card-title">Calculating and Resumming the Classical Virial Expansion Using
-                  Automated Algebra
+                <h5 class="card-title">Sandia National Laboratories
                 </h5>
-                <h6 class="card-subtitle mb-2">July 2023</h6>
-                <p class="card-text">Dr. Joaquín Drut and I have uploaded a preprint of our most recent work involving
-                  the Classical Virial Expansion Engine (CVE²). In it, we use schematic model potentials to exactly
-                  calculate the virial coefficients of a classical gas up to 6th order, and we use them (along with
-                  Padé-Borel resummation techniques) to investigate the convergence properties
-                  of the virial expansion of basic thermodynamic quantities.</p>
-                <a href="https://arxiv.org/abs/2307.13170" target="_blank"
-                  class="btn btn-primary icon-link icon-link-hover d-inline-flex">Link
-                  to arXiv Preprint<svg class="bi">
+                <h6 class="card-subtitle mb-2">Summer 2025</h6>
+                <p class="card-text">I'm excited to be 
+                  joining Dr. Jackie Chen's group at Sandia National Laboratories this summer to work on developing reduced-order 
+                  models for turbulent reacting flows. This opportunity is made possible by the DOE CSGF program, which enables
+                  fellows to participate in a twelve-week research practicum at their choice of one of the 21 DOE national laboratories.
+                </p>
+                <a href="https://www.krellinst.org/csgf/doe-lab-practicum" target="_blank"
+                  class="btn btn-primary icon-link icon-link-hover d-inline-flex">DOE CSGF Practicum<svg class="bi">
                     <use xlink:href="#out" />
                   </svg></a>
               </div>
@@ -123,20 +127,19 @@
           </div>
           <div class="col-lg">
             <div class="card h-100">
-              <h5 class="card-header">Undergraduate Graduation</h5>
+              <h5 class="card-header">New Fellowship</h5>
               <div class="card-body">
-                <h5 class="card-title">Highest Honors, B.S. with Majors in Applied Mathematics and
-                  Astrophysics
+                <h5 class="card-title">DOE Computational Science Graduate Fellowship
                 </h5>
-                <h6 class="card-subtitle mb-2">May 2023</h6>
-                <p class="card-text">I graduated from the University of North Carolina at Chapel Hill with a Bachelor of
-                  Science in Physics and a Second Major in Mathematics. I recieved highest honors in physics for my
-                  senior honors
-                  thesis project, the Classical Virial Expansion Engine (CVE²), which I completed under the advisement
-                  of Dr. Joaquín Drut. The thesis can be found on the Carolina Digital Repository at the link below.</p>
-                <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j?locale=en" target="_blank"
+                <h6 class="card-subtitle mb-2">April 2024</h6>
+                <p class="card-text">I'm grateful to have received the Department of Energy Computational Science
+                  Graduate Fellowship (CSGF) on the Mathematics/Computer Science Track. The fellowship supports
+                  "fundamental research into enabling technologies that are broadly relevant to science and engineering
+                  applications of interest to the DOE."
+                </p>
+                <a href="https://www.krellinst.org/csgf/about-doe-csgf/news-events/2024-incoming-class" target="_blank"
                   class="btn btn-primary icon-link icon-link-hover d-inline-flex">View
-                  Undergraduate Thesis<svg class="bi">
+                  Press Release<svg class="bi">
                     <use xlink:href="#out" />
                   </svg></a>
               </div>
@@ -144,21 +147,17 @@
           </div>
           <div class="col-lg">
             <div class="card h-100">
-              <h5 class="card-header">Internship</h5>
+              <h5 class="card-header">New Paper</h5>
               <div class="card-body">
-                <h5 class="card-title">Sales and Trading Rotational Summer Analyst at Bank of America
+                <h5 class="card-title">Calculating the Classical Virial Expansion Using Automated Algebra
                 </h5>
-                <h6 class="card-subtitle mb-2">Summer 2022</h6>
-                <p class="card-text">I most recently interned as a Sales and Trading Analyst at Bank of America, where I
-                  had the opportunity to work with amazing teams on the Equity Derivative Trading and Credit Trading
-                  desks. Within the Equity Derivative desk, I rotated though the single stock, index, and exotic groups,
-                  and
-                  within the Credit Trading desk, I rotated through the investment-grade, emerging markets, high-yield,
-                  and
-                  leveraged loans groups.</p>
-                <a href="/cv/" class="btn btn-primary icon-link icon-link-hover d-inline-flex">See
-                  Earlier Experience<svg class="bi">
-                    <use xlink:href="#right" />
+                <h6 class="card-subtitle mb-2">December 2023</h6>
+                <p class="card-text">Dr. Joaquín Drut and I published our recent work on using schematic model potentials to exactly
+                  calculate the virial coefficients of a classical gas. We compute coefficients up to 6th order and use
+                  Padé-Borel resummation techniques to investigate the convergence properties of the virial expansion of basic thermodynamic quantities.</p>
+                <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.108.065307" target="_blank"
+                  class="btn btn-primary icon-link icon-link-hover d-inline-flex">Link to Journal Article<svg class="bi">
+                    <use xlink:href="#out" />
                   </svg></a>
               </div>
             </div>
@@ -246,7 +245,9 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.10.1/tsparticles.bundle.min.js"></script>
   <script src="js/app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script src="../js/fontawesome.min.js"></script>
   <script src="../js/brands.min.js"></script>
   <script src="../js/solid.min.js"></script>
