@@ -63,25 +63,36 @@ $secondary: #0dcaf0;
 
 .cv-toc .nav-underline .nav-link {
 
+    // removes bottom border
     border-bottom: 0;
+    // padding format is [top] [right] [bottom] [left]
     padding: 0 0 0 1em;
+    // adds left border, same width as navbar
+    // off by default
     border-left: var(--#{$prefix}nav-underline-border-width) solid transparent;
 
+    // focus is when you select with keyboard or haven't release mouse
+    // want it off so only scrollspy highlights are present
     &:focus {
         color: var(--#{$prefix}nav-link-color);
         border-left-color: transparent;
     }
 
+    // makes sure border appears on hover
     &:hover {
-        color: var(--#{$prefix}nav-link-hover-color);
+        // color: var(--#{$prefix}nav-link-hover-color);
         border-left-color: currentColor;
     }
 
+    // makes sure border appears on active
+    // note .active (for class) vs. :active (for state)
     &.active {
+        // needs to be here for subnavs
         color: var(--#{$prefix}navbar-active-color);
         border-left-color: currentColor;
     }
 
+    // need this to cover all cases
     &.active:focus {
         color: var(--#{$prefix}navbar-active-color);
         border-left-color: currentColor;

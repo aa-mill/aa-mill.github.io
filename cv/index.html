@@ -48,25 +48,26 @@
     </nav>
   </header>
   <div class="container-md">
-    <div class="row py-5 justify-content-center">
+    <div class="row py-5">
       <div class="col-3 d-none d-lg-block">
         <div class="position-sticky" style="top: 5em;">
-          <h3 id="edu" class="mb-3"><span class="text-primary">
+          <h3 class="mb-3"><span class="text-primary">
             // </span><span class="text-light">Contents</span></h3>
           <nav id="toc" class="navbar cv-toc">
-            <nav class="nav navbar-nav nav-underline flex-column">
+            <!-- need nav class for subnav highlights -->
+            <div class="nav navbar-nav nav-underline flex-column">
               <a class="nav-link" href="#edu">Education</a>
               <a class="nav-link" href="#awards">Awards</a>
               <a class="nav-link" href="#interests">Academic Interests</a>
               <a class="nav-link" href="#pubs">Preprints and Publications</a>
               <a class="nav-link" href="#exp">Experience</a>
-              <nav class="nav navbar-nav nav-underline flex-column">
+              <div class="nav navbar-nav nav-underline flex-column">
                 <a class="nav-link ms-3" href="#research">Research</a>
                 <a class="nav-link ms-3" href="#industry">Industry</a>
-              </nav>
+              </div>
               <a class="nav-link" href="#leader">Leadership and Community Involvement</a>
               <a class="nav-link" href="#add">Additional Info</a>
-            </nav>
+            </div>
           </nav>
         </div>
       </div>
@@ -106,6 +107,7 @@
               <p class="card-text text-body-tertiary mb-0 d-sm-none">Present</p>
               <ul class="card-text">
                 <li>Computational Science and Engineering Lab</li>
+                <li>Advised by Petros Koumoutsakos</li>
               </ul>
               <div class="d-flex justify-content-between align-items-baseline">
                 <h5 class="card-title">The University of North Carolina at Chapel Hill</h5>
@@ -137,6 +139,26 @@
           <h3 id="awards" class="mb-3"><span class="text-primary">
               // </span><span class="text-light">Awards</span></h3>
           <div class="accordion accordion-flush" id="acc">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#csgf">
+                  DOE Computational Science Graduate Fellowship
+                </button>
+              </h2>
+              <div id="csgf" class="accordion-collapse collapse" data-bs-parent="#acc">
+                <p class="accordion-body">Awarded to 40 students nationwide for the 2024-2025 class, this fellowship 
+                  provides a $45k stipend, full tuition and fees, and an academic allowance for up to 4 years to support
+                  to "students pursuing doctoral degrees in fields that use high-performance computing to solve 
+                  complex science and engineering problems". <a
+                  class="icon-link icon-link-hover" href="https://www.krellinst.org/csgf/about-doe-csgf/news-events/2024-incoming-class">
+                  Press release
+                  <svg class="bi">
+                    <use xlink:href="#out"></use>
+                  </svg>
+                </a></p>
+              </div>
+            </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -242,13 +264,15 @@
               // </span><span class="text-light">Academic Interests</span></h3>
           <div class="d-flex gap-2 flex-wrap text-primary-emphasis">
             <div class="bg-primary-subtle rounded-pill px-3 py-2">
+              AI/ML</div>
+            <div class="bg-primary-subtle rounded-pill px-3 py-2">
+              Turbulence</div>
+            <div class="bg-primary-subtle rounded-pill px-3 py-2">
+              HPC</div>
+            <div class="bg-primary-subtle rounded-pill px-3 py-2">
               Scientific Computing</div>
             <div class="bg-primary-subtle rounded-pill px-3 py-2">
-              Numerical Analysis</div>
-            <div class="bg-primary-subtle rounded-pill px-3 py-2">
-              Computational Engineering</div>
-            <div class="bg-primary-subtle rounded-pill px-3 py-2">
-              Fast Algorithms</div>
+              Symmetry</div>
             <div class="bg-primary-subtle rounded-pill px-3 py-2">
               Applied Mathematics</div>
             <div class="bg-primary-subtle rounded-pill px-3 py-2">

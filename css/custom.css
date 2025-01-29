@@ -9395,7 +9395,6 @@ textarea.form-control-lg {
   border-left-color: transparent;
 }
 .cv-toc .nav-underline .nav-link:hover {
-  color: var(--bs-nav-link-hover-color);
   border-left-color: currentColor;
 }
 .cv-toc .nav-underline .nav-link.active {
