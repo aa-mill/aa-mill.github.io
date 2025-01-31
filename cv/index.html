@@ -17,11 +17,11 @@
   <header class="sticky-top">
     <nav class="navbar navbar-expand-md bg-dark">
       <div class="container-md">
-        <a href="../" class="navbar-brand d-inline-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
-          width="1.25em" fill="currentColor" class="me-2">
-          <path
-            d="m234.29,201.24l-23.99-41.55-61.52-106.56-20.78-35.98-20.78,35.98-61.52,106.56-23.99,41.55L0,238.86h38.39l22.18-37.62h46.66v37.62h41.55v-116.07l21.3,36.9,23.99,41.55,21.71,37.62h40.22l-21.71-37.62Zm-149.24-41.55l22.18-37.62v37.62h-22.18Z" />
-        </svg>Aaron Miller</a>
+        <a href="../" class="navbar-brand d-inline-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256" width="1.25em" fill="currentColor" class="me-2">
+            <path
+              d="m234.29,201.24l-23.99-41.55-61.52-106.56-20.78-35.98-20.78,35.98-61.52,106.56-23.99,41.55L0,238.86h38.39l22.18-37.62h46.66v37.62h41.55v-116.07l21.3,36.9,23.99,41.55,21.71,37.62h40.22l-21.71-37.62Zm-149.24-41.55l22.18-37.62v37.62h-22.18Z" />
+          </svg>Aaron Miller</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,12 +47,16 @@
       </div>
     </nav>
   </header>
+  <!-- this container holds everything -->
   <div class="container-md">
     <div class="row py-5">
+      <!-- this column holds table of contents -->
+      <!-- has width 3 on lg and up, doesn't display otherwise -->
       <div class="col-3 d-none d-lg-block">
+        <!-- top sets the height at which the toc sticks -->
         <div class="position-sticky" style="top: 5em;">
           <h3 class="mb-3"><span class="text-primary">
-            // </span><span class="text-light">Contents</span></h3>
+              // </span><span class="text-light">Contents</span></h3>
           <nav id="toc" class="navbar cv-toc">
             <!-- need nav class for subnav highlights -->
             <div class="nav navbar-nav nav-underline flex-column">
@@ -71,7 +75,9 @@
           </nav>
         </div>
       </div>
+      <!-- this column holds the main content -->
       <div class="col-lg" data-bs-spy="scroll" data-bs-target="#toc" data-bs-smooth-scroll="true" tabindex="0">
+        <!-- holds name and links -->
         <div class="d-flex flex-column align-items-center mb-3">
           <h1><span class="text-primary">
               &lt </span><span class="text-light">Aaron Miller</span><span class="text-primary"> /&gt</span></h1>
@@ -93,6 +99,7 @@
             </a>
           </div>
         </div>
+        <!-- education section -->
         <div class="mb-3">
           <h3 id="edu" class="mb-3"><span class="text-primary">
               // </span><span class="text-light">Education</span></h3>
@@ -102,6 +109,9 @@
                 <h5 class="card-title">Harvard University</h5>
                 <p class="card-text d-none d-sm-block">Present</p>
               </div>
+              <!-- lh-base is here to even out the spacing between title, subtitle, loc, and date -->
+              <!-- it makes line-height the same for all text -->
+              <!-- without it, title, sub, and loc seem clustered with date a bit too low -->
               <h6 class="card-subtitle lh-base">Ph.D. Student in Applied Mathematics</h6>
               <p class="card-text text-body-secondary mb-0">Cambridge, MA</p>
               <p class="card-text text-body-tertiary mb-0 d-sm-none">Present</p>
@@ -113,7 +123,8 @@
                 <h5 class="card-title">The University of North Carolina at Chapel Hill</h5>
                 <p class="card-text d-none d-sm-block">May 2023</p>
               </div>
-              <h6 class="card-subtitle lh-base">B.S. in Astrophysics and Applied Mathematics, Minor in Statistics and Analytics
+              <h6 class="card-subtitle lh-base">B.S. in Astrophysics and Applied Mathematics, Minor in Statistics and
+                Analytics
               </h6>
               <p class="card-text text-body-secondary mb-0">Chapel Hill, NC</p>
               <p class="card-text text-body-tertiary mb-0 d-sm-none">May 2023</p>
@@ -135,6 +146,7 @@
             </div>
           </div>
         </div>
+        <!-- awards section -->
         <div class="mb-3">
           <h3 id="awards" class="mb-3"><span class="text-primary">
               // </span><span class="text-light">Awards</span></h3>
@@ -147,16 +159,16 @@
                 </button>
               </h2>
               <div id="csgf" class="accordion-collapse collapse" data-bs-parent="#acc">
-                <p class="accordion-body">Awarded to 40 students nationwide for the 2024-2025 class, this fellowship 
+                <p class="accordion-body">Awarded to 40 students nationwide for the 2024-2025 class, this fellowship
                   provides a $45k stipend, full tuition and fees, and an academic allowance for up to 4 years to support
-                  to "students pursuing doctoral degrees in fields that use high-performance computing to solve 
-                  complex science and engineering problems". <a
-                  class="icon-link icon-link-hover" href="https://www.krellinst.org/csgf/about-doe-csgf/news-events/2024-incoming-class">
-                  Press release
-                  <svg class="bi">
-                    <use xlink:href="#out"></use>
-                  </svg>
-                </a></p>
+                  to "students pursuing doctoral degrees in fields that use high-performance computing to solve
+                  complex science and engineering problems." <a class="icon-link icon-link-hover"
+                    href="https://www.krellinst.org/csgf/about-doe-csgf/news-events/2024-incoming-class">
+                    Press release
+                    <svg class="bi">
+                      <use xlink:href="#out"></use>
+                    </svg>
+                  </a></p>
               </div>
             </div>
             <div class="accordion-item">
@@ -169,13 +181,13 @@
               <div id="paul" class="accordion-collapse collapse" data-bs-parent="#acc">
                 <p class="accordion-body">Highest-level award given in the UNC-Chapel Hill Department of Physics and
                   Astronomy. Awarded on the basis of scholarship, scientific insight, and professional seriousness. Sole
-                  recipient out of ~50 majors. <a
-                  class="icon-link icon-link-hover" href="https://chancellorsawards.unc.edu/2023-student-academic-awards/">
-                  More info
-                  <svg class="bi">
-                    <use xlink:href="#out"></use>
-                  </svg>
-                </a></p>
+                  recipient out of ~50 majors. <a class="icon-link icon-link-hover"
+                    href="https://chancellorsawards.unc.edu/2023-student-academic-awards/">
+                    More info
+                    <svg class="bi">
+                      <use xlink:href="#out"></use>
+                    </svg>
+                  </a></p>
               </div>
             </div>
             <div class="accordion-item">
@@ -259,6 +271,7 @@
             </div>
           </div>
         </div>
+        <!-- interests section -->
         <div class="mb-3">
           <h3 id="interests" class="mb-3"><span class="text-primary">
               // </span><span class="text-light">Academic Interests</span></h3>
@@ -274,11 +287,12 @@
             <div class="bg-primary-subtle rounded-pill px-3 py-2">
               Symmetry</div>
             <div class="bg-primary-subtle rounded-pill px-3 py-2">
-              Applied Mathematics</div>
+              Fluid Mechanics</div>
             <div class="bg-primary-subtle rounded-pill px-3 py-2">
               Statistical Physics</div>
           </div>
         </div>
+        <!-- publications section -->
         <div class="mb-3">
           <h3 id="pubs" class="mb-3"><span class="text-primary">
               // </span><span class="text-light">Preprints and Publications</span></h3>
@@ -287,22 +301,20 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#virial">
-                  (Preprint) Miller, A.M. and Drut, J.E. (2023). Calculating and resumming the classical virial
-                  expansion using
-                  automated algebra. [online] arXiv.org. doi:https://doi.org/10.48550/arXiv.2307.13170.
+                  <u>Miller, A. M.</u> &nbsp; & Drut, J. E. Calculating the classical virial expansion using automated
+                  algebra. Phys. Rev. E 108, 065307 (2023).
                 </button>
               </h2>
               <div id="virial" class="accordion-collapse collapse" data-bs-parent="#acc-pubs">
                 <div class="accordion-body">
                   <h5 class="text-body-tertiary">Abstract</h5>Using schematic model potentials, we calculate exactly the
-                  virial
-                  coefficients of a classical gas up to sixth order and use them to assess the convergence properties of
-                  the virial expansion of basic thermodynamic quantities such as pressure, density, and compressibility.
-                  At sufficiently strong couplings, as expected, the virial expansion fails to converge. However, at
-                  least for the interactions and parameter ranges we explored, we find that Padé-Borel resummation
-                  methods are extremely effective in improving the convergence of the expansion. <a
-                    class="icon-link icon-link-hover" href="https://arxiv.org/abs/2307.13170">
-                    View arXiv preprint
+                  virial coefficients of a classical gas up to sixth order and use them to calculate the virial
+                  expansion of basic thermodynamic quantities such as pressure, density, and compressibility. At
+                  sufficiently strong couplings, as expected, the virial expansion fails to converge. However, at least
+                  for the interactions and parameter ranges we explored, we find that Padé-Borel resummation methods are
+                  very effective in improving the convergence of the expansion. <a class="icon-link icon-link-hover"
+                    href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.108.065307">
+                    View journal article
                     <svg class="bi">
                       <use xlink:href="#out"></use>
                     </svg>
@@ -314,7 +326,7 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#under">
-                  Miller, A.M. (2023). Classical Virial Expansion Engine. Undergraduate Honors Thesis.
+                  <u>Miller, A. M.</u> &nbsp; Classical virial expansion engine. (The University of North Carolina at Chapel Hill, 2023).
                 </button>
               </h2>
               <div id="under" class="accordion-collapse collapse" data-bs-parent="#acc-pubs">
@@ -343,6 +355,7 @@
             </div>
           </div>
         </div>
+        <!-- experience section -->
         <div class="mb-3">
           <h3 id="exp" class="mb-3"><span class="text-primary">
               // </span><span class="text-light">Experience</span></h3>
@@ -522,7 +535,9 @@
       <p class="mb-0">CC BY 4.0</p>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script src="../js/fontawesome.min.js"></script>
   <script src="../js/brands.min.js"></script>
   <script src="../js/solid.min.js"></script>
