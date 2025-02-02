@@ -15,6 +15,7 @@
 <body class="body">
   <i data-fa-symbol="right" class="fa-solid fa-arrow-right-long"></i>
   <i data-fa-symbol="out" class="fa-solid fa-arrow-up-right-from-square"></i>
+  <i data-fa-symbol="pdf" class="fa-solid fa-file-pdf"></i>
   <header class="sticky-top">
     <nav class="navbar navbar-expand-md bg-dark">
       <div class="container-md">
@@ -48,8 +49,33 @@
     </nav>
   </header>
   <div class="container-md">
-    <h1 id="projects" class="text-center my-5"><span class="text-primary">
+    <h1 class="text-center my-5"><span class="text-primary">
         &lt </span><span class="text-light">Projects</span><span class="text-primary"> /&gt</span></h1>
+    <div class="card mb-5">
+      <div class="card-header">Complete</div>
+      <div class="row g-0">
+        <div class="col-lg-6 bg-dark-subtle d-flex align-items-center">
+          <embed src="asymptotic.pdf" type="application/pdf" class="w-100 h-100" style="min-height: 400px;">
+        </div>
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="card-body">
+            <h3 class="card-title"><span class="text-primary">
+                // </span><span class="text-light">Asymptotic Expansions of the Stream Function for the Flow Past a
+                  Sphere at Small Reynolds Numbers</span></h3>
+            <p class="card-text">I completed this project for Harvard's AM 201: Physical Mathematics course. It derives
+              the matched asymptotic expansion solutions to the stream function for Stoke's flow past a sphere,
+              connecting the early works of Saul Kaplun and P. A. Lagerstrom and Ian Proudman and J. R. A. Pearson
+              in 1957 to the formalism put forth by Milton Van Dyke in 1975.
+            </p>
+            <a href="asymptotic.pdf" class="btn btn-primary icon-link icon-link-hover d-inline-flex">View PDF
+              <svg class="bi">
+                <use xlink:href="#pdf"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="card mb-5">
       <div class="card-header">Complete</div>
       <div class="row g-0">
@@ -62,15 +88,15 @@ import cvee
 T = 1
 
 # define interaction potential, parameterized by A,b1,b2
-A,b1,b2 = 3,4,5
+A, b1, b2 = 3, 4, 5
 def potential(r,T):
-    return -T*np.log(1+A*np.exp(-b1*r**2)-(1+a)*np.exp(-b2*r**2))
+    return -T*np.log(1 + A*np.exp(-b1*r**2) - (1 + a)*np.exp(-b2*r**2))
 
 # specify desired virial coefficient orders
-Ns = [2,5,9]
+Ns = [2, 5, 9]
 
 # get results
-output = [cvee.Virial(N,potential,T).assemble() for N in Ns]</code></pre>
+output = [cvee.Virial(N, potential, T).assemble() for N in Ns]</code></pre>
         </div>
         <div class="col-lg-6 d-flex align-items-center">
           <div class="card-body">
@@ -82,14 +108,14 @@ output = [cvee.Virial(N,potential,T).assemble() for N in Ns]</code></pre>
               its capabilities further. We recently released a preprint covering our latest developments. Additional
               information can be found on the project's website, listed below. </p>
             <div class="d-flex flex-wrap gap-3">
-              <a href="https://arxiv.org/abs/2307.13170" class="btn btn-primary icon-link icon-link-hover d-flex">Newest Paper<svg class="bi">
+              <a href="https://arxiv.org/abs/2307.13170" class="btn btn-primary icon-link icon-link-hover d-inline-flex">Newest Paper<svg class="bi">
                   <use xlink:href="#out"></use>
                 </svg></a>
-              <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j" class="btn btn-outline-light icon-link icon-link-hover d-flex">Undergraduate Thesis<svg
+              <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j" class="btn btn-outline-light icon-link icon-link-hover d-inline-flex">Undergraduate Thesis<svg
                   class="bi">
                   <use xlink:href="#out"></use>
                 </svg></a>
-              <a href="https://tarheels.live/cvee/" class="btn btn-outline-light icon-link icon-link-hover d-flex">CVE² Website<svg class="bi">
+              <a href="https://tarheels.live/cvee/" class="btn btn-outline-light icon-link icon-link-hover d-inline-flex">CVE² Website<svg class="bi">
                   <use xlink:href="#out"></use>
                 </svg></a>
             </div>
