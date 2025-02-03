@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/custom.css">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo 2">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/github-dark.min.css">
 </head>
 
 <body class="body">
@@ -19,11 +19,12 @@
   <header class="sticky-top">
     <nav class="navbar navbar-expand-md bg-dark">
       <div class="container-md">
-        <a href="../" class="navbar-brand d-inline-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
-          width="1.25em" fill="currentColor" class="me-2">
-          <path
-            d="m234.29,201.24l-23.99-41.55-61.52-106.56-20.78-35.98-20.78,35.98-61.52,106.56-23.99,41.55L0,238.86h38.39l22.18-37.62h46.66v37.62h41.55v-116.07l21.3,36.9,23.99,41.55,21.71,37.62h40.22l-21.71-37.62Zm-149.24-41.55l22.18-37.62v37.62h-22.18Z" />
-        </svg>Aaron Miller</a>        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <a href="../" class="navbar-brand d-inline-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256" width="1.25em" fill="currentColor" class="me-2">
+            <path
+              d="m234.29,201.24l-23.99-41.55-61.52-106.56-20.78-35.98-20.78,35.98-61.52,106.56-23.99,41.55L0,238.86h38.39l22.18-37.62h46.66v37.62h41.55v-116.07l21.3,36.9,23.99,41.55,21.71,37.62h40.22l-21.71-37.62Zm-149.24-41.55l22.18-37.62v37.62h-22.18Z" />
+          </svg>Aaron Miller</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -54,18 +55,26 @@
     <div class="card mb-5">
       <div class="card-header">Complete</div>
       <div class="row g-0">
-        <div class="col-lg-6 bg-dark-subtle d-flex align-items-center">
-          <embed src="asymptotic.pdf" type="application/pdf" class="w-100 h-100" style="min-height: 400px;">
+        <div class="col-lg-6 bg-dark-subtle d-flex align-items-center justify-content-center p-4">
+          <div>
+            <p>The stream function solution of the Stokes equation for steady flow with free stream velocity \(U\) past
+              a sphere of radius \(a\) is</p>
+            \[
+            \psi = \frac{1}{2} Ur^2\sin^2\theta\left(1 - \frac{3a}{2r} + \frac{a^3}{2r^3}\right).
+            \]
+            <p>However, this is only the leading order uniformly valid expansion of the stream function in the limit of
+              small Reynolds number. What do the higher order expansions look like?</p>
+          </div>
         </div>
         <div class="col-lg-6 d-flex align-items-center">
           <div class="card-body">
             <h3 class="card-title"><span class="text-primary">
                 // </span><span class="text-light">Asymptotic Expansions of the Stream Function for the Flow Past a
-                  Sphere at Small Reynolds Numbers</span></h3>
+                Sphere at Small Reynolds Numbers</span></h3>
             <p class="card-text">I completed this project for Harvard's AM 201: Physical Mathematics course. It derives
-              the matched asymptotic expansion solutions to the stream function for Stoke's flow past a sphere,
-              connecting the early works of Saul Kaplun and P. A. Lagerstrom and Ian Proudman and J. R. A. Pearson
-              in 1957 to the formalism put forth by Milton Van Dyke in 1975.
+              the matched asymptotic expansions of the stream function for low Reynolds number flow past a sphere,
+              connecting the early works of Saul Kaplun & P. A. Lagerstrom and Ian Proudman & J. R. A. Pearson
+              in 1957 to the formalism developed by Milton Van Dyke in his 1964 textbook.
             </p>
             <a href="asymptotic.pdf" class="btn btn-primary icon-link icon-link-hover d-inline-flex">View PDF
               <svg class="bi">
@@ -87,10 +96,10 @@ import cvee
 # define system temperature
 T = 1
 
-# define interaction potential, parameterized by A,b1,b2
+# define interaction potential, parameterized by A, b1, b2
 A, b1, b2 = 3, 4, 5
-def potential(r,T):
-    return -T*np.log(1 + A*np.exp(-b1*r**2) - (1 + a)*np.exp(-b2*r**2))
+def potential(r, T):
+    return -T*np.log(1 + A*np.exp(-b1*r**2) - (1 + A)*np.exp(-b2*r**2))
 
 # specify desired virial coefficient orders
 Ns = [2, 5, 9]
@@ -102,20 +111,24 @@ output = [cvee.Virial(N, potential, T).assemble() for N in Ns]</code></pre>
           <div class="card-body">
             <h3 class="card-title"><span class="text-primary">
                 // </span><span class="text-light">Classical Virial Expansion Engine (CVE²)</span></h3>
-            <p class="card-text">The CVE² computes the power series coefficients of the classical virial expansion of
-              the grand-canonical partition function. Its creation is the subject of my undergraduate honors thesis.
-              Since my defense, I have continued to work with my advisor, Dr. Joaquín Drut, on extending
-              its capabilities further. We recently released a preprint covering our latest developments. Additional
-              information can be found on the project's website, listed below. </p>
+            <p class="card-text">The CVE² package computes the power series coefficients of the classical virial
+              expansion of
+              the grand-canonical partition function. Its development was the subject of my undergraduate honors thesis.
+              After my defense, my thesis advisor and I extended the package further, and we published a journal article on our findings.
+              Additional
+              information can be found on the project's website. </p>
             <div class="d-flex flex-wrap gap-3">
-              <a href="https://arxiv.org/abs/2307.13170" class="btn btn-primary icon-link icon-link-hover d-inline-flex">Newest Paper<svg class="bi">
+              <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.108.065307"
+                class="btn btn-primary icon-link icon-link-hover d-inline-flex">Journal Article<svg class="bi">
                   <use xlink:href="#out"></use>
                 </svg></a>
-              <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j" class="btn btn-outline-light icon-link icon-link-hover d-inline-flex">Undergraduate Thesis<svg
+              <a href="https://cdr.lib.unc.edu/concern/honors_theses/dj52wg56j"
+                class="btn btn-outline-light icon-link icon-link-hover d-inline-flex">Undergraduate Thesis<svg
                   class="bi">
                   <use xlink:href="#out"></use>
                 </svg></a>
-              <a href="https://tarheels.live/cvee/" class="btn btn-outline-light icon-link icon-link-hover d-inline-flex">CVE² Website<svg class="bi">
+              <a href="https://tarheels.live/cvee/"
+                class="btn btn-outline-light icon-link icon-link-hover d-inline-flex">CVE² Website<svg class="bi">
                   <use xlink:href="#out"></use>
                 </svg></a>
             </div>
@@ -136,13 +149,16 @@ output = [cvee.Virial(N, potential, T).assemble() for N in Ns]</code></pre>
       <p class="mb-0">CC BY 4.0</p>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script src="../js/fontawesome.min.js"></script>
   <script src="../js/brands.min.js"></script>
   <script src="../js/solid.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
-
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 
 </html>
